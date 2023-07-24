@@ -9,6 +9,16 @@ class Trening extends Model
 {
     use HasFactory;
 
+    protected $table = 'treninzi';
+
+    protected $fillable = [
+        'naziv',
+        'trajanje',
+        'nivoTezine',
+        'polaznik_id',
+        'instruktor_id',
+    ];
+
     public function polaznik()
     {
         return $this->belongsTo(Polaznik::class);

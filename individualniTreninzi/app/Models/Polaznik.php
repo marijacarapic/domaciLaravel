@@ -9,6 +9,14 @@ class Polaznik extends Model
 {
     use HasFactory;
 
+    protected $table = 'polaznici';
+
+    protected $fillable = [
+        'imePrezime',
+        'grad',
+        'godiste',
+    ];
+
     public function treninzi()
     {
         return $this->hasMany(Trening::class);
