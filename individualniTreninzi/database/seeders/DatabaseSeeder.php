@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\TreningSeeder;
+use Database\Seeders\PolaznikSeeder;
+use Database\Seeders\InstruktorSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +15,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        $InstruktorSeeder = new InstruktorSeeder;
+        $InstruktorSeeder->run();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $PolaznikSeeder = new PolaznikSeeder;
+        $PolaznikSeeder->run();
+
+        $TreningSeeder = new TreningSeeder;
+        $TreningSeeder->run(); 
     }
 }

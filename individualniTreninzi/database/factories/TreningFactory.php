@@ -22,7 +22,7 @@ class TreningFactory extends Factory
             'naziv' => $this->faker->randomElement($array = array('HIIT trening',
             'Joga', 'Trening za mrsavljenje', 'Funkcionalni trening', 'Pilates trening', 'Trening za seniore',
             'Trening za trkace', 'Boot camp izazov', 'CrossFit izazov')),
-            'grad' => $this->faker->city(),
+            'trajanje' => $this->faker->numberBetween($min = 60, $max = 120),
             'nivoTezine' => $this->faker->randomElement($array = array('Lako','Srednje','Tesko')),
             'polaznik_id' => Polaznik::factory(),
             'instruktor_id' => Instruktor::factory(),
