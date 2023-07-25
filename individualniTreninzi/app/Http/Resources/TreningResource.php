@@ -20,7 +20,7 @@ class TreningResource extends JsonResource
             'Naziv treninga -> ' => $this->resource->naziv,
             'Trajanje treninga u minutima -> ' => $this->resource->trajanje,
             'Nivo tezine trenings -> ' => $this->resource->nivoTezine,
-            'Polaznik -> ' => new PolaznikResource($this->resource->polaznik)
+            'Polaznik -> ' => new PolaznikResource($this->resource->polaznik),
             'Instruktor -> ' => new InstruktorResource($this->resource->instruktor)
         ];
     }
